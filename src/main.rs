@@ -26,7 +26,7 @@ fn run() -> Result<(), Box<dyn Error>> {
         if metadata.is_file() {
             println!("{} ({} B)", filename, metadata.len());
         } else {
-            return Err(format!("{} is not a regular file", filename).into());
+            println!("{} is not a regular file", filename);
         }
     }
 
